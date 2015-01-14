@@ -85,4 +85,4 @@ fullDat <- data.table(fullDat)
 finalDat <- fullDat[, lapply(.SD,mean), by=c("Subject_ID", "Activity_ID")]
 
 # Output the final clean and tidy data set into a file for further analysis
-write.table(finalDat,"clean_Data.txt")
+write.table(finalDat,"clean_Data.txt",row.names=FALSE)
